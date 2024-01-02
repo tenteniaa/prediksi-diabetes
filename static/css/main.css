@@ -11335,14 +11335,29 @@ Preloader
   }
 }
 
+.wrapper {
+  max-width: 1400px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.wrapper form {
+  width: 60%;
+}
+.required::after {
+  content: ' *';
+}
+
 /* Wizard */
 .wizard > .steps .current-info, .wizard > .steps .number {
   display: none; }
 
 #wizard {
-  min-height: 834px;
+  min-height: 450px;
   background: #fff;
   margin-right: 60px;
+  border-radius: 15px;
   padding: 107px 75px 65px; }
 
 .steps {
@@ -11365,7 +11380,6 @@ Preloader
     .steps ul:before {
       content: "Billing Details";
       font-size: 22px;
-      font-family: "Poppins-SemiBold";
       color: #333;
       top: -38px;
       position: absolute; }

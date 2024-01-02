@@ -27,7 +27,7 @@ $(function(){
             return true; 
         },
         labels: {
-            finish: "Place Holder",
+            finish: "Submit",
             next: "Next",
             previous: "Previous"
         }
