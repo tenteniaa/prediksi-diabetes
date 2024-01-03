@@ -8,16 +8,16 @@
 <div class="right_col" role="main">
     <div class="">
       <div class="page-title pb-2">
-        <h3>Form Wizards</h3>
+        <h3 style="visibility: hidden;">Form Deteksi Diabetes</h3>
       </div>
       <div class="clearfix"></div>
 
       <div class="row">
 
         <div class="col-md-12 col-sm-12 ">
-          <div class="x_panel">
+          <div class="x_panel diabetes_form">
             <div class="x_title">
-                <h2>Prediksi Penyakit Diabetes Mellitus <small>Sessions</small></h2>
+                <h2>Form Prediksi Penyakit Diabetes Mellitus <small>Sessions</small></h2>
                 <div class="nav navbar-right panel_toolbox">
                   <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </div>
@@ -26,13 +26,15 @@
             <div class="x_content">
 
                 <!-- Smart Wizard -->
-                <p>Lengkapi seluruh pertanyaan di bawah ini.</p>
+                <p>Lengkapi seluruh pertanyaan di bawah dengan jujur sesuai dengan kondisi saat ini sehingga hasil yang diperoleh menjadi lebih akurat.</p>
                 <div id="wizard" class="form_wizard wizard_horizontal">
                   <ul class="wizard_steps">
                     <li><a href="#step-1"><span class="step_no">1</span></a></li>
                     <li><a href="#step-2"><span class="step_no">2</span></a></li>
                     <li><a href="#step-3"><span class="step_no">3</span></a></li>
                     <li><a href="#step-4"><span class="step_no">4</span></a></li>
+                    <li><a href="#step-5"><span class="step_no">5</span></a></li>
+                    <li><a href="#step-6"><span class="step_no">6</span></a></li>
                   </ul>
                   <div id="step-1">
                     <form class="form-horizontal">
@@ -49,7 +51,7 @@
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align">Gender</label>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Jenis Kelamin</label>
                         <div class="col-md-6 col-sm-6 ">
                           <div id="gender" class="btn-group" data-toggle="buttons">
                             <label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-secondary">
@@ -64,40 +66,121 @@
                     </form>
                   </div>
                   <div id="step-2">
-                    <h2 class="StepTitle">Step 2 Content</h2>
-                    <p>
-                      do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <div class="form-group form-group-diabetes">
+                        <label for="polyuria">Apakah Anda mengalami buang air kecil berlebihan?</label>
+                        <div class="form-group-row mb-4">
+                            <input type="radio" name="polyuria" value="0"> Ya
+                            <input type="radio" name="polyuria" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-diabetes">
+                        <label for="polydipsia">Apakah Anda merasa haus berlebihan?</label>
+                        <div class="form-group-row mb-4">
+                            <input type="radio" name="polydipsia" value="0"> Ya
+                            <input type="radio" name="polydipsia" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-diabetes">
+                        <label for="weight_loss">Apakah Anda mengalami penurunan berat badan yang tiba-tiba?</label>
+                        <div class="form-group-row">
+                            <input type="radio" name="weight_loss" value="0"> Ya
+                            <input type="radio" name="weight_loss" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
                   </div>
                   <div id="step-3">
-                    <h2 class="StepTitle">Step 3 Content</h2>
-                    <p>
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <div class="form-group form-group-diabetes">
+                        <label for="weakness">Apakah Anda merasa lemah atau lesu?"?</label>
+                        <div class="form-group-row mb-4">
+                            <input type="radio" name="weakness" value="0"> Ya
+                            <input type="radio" name="weakness" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-diabetes">
+                        <label for="polyphagia">Apakah Anda mengalami nafsu makan berlebihan?</label>
+                        <div class="form-group-row mb-4">
+                            <input type="radio" name="polyphagia" value="0"> Ya
+                            <input type="radio" name="polyphagia" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-diabetes">
+                        <label for="genital">Apakah Anda mengalami infeksi jamur pada area genital (kelamin)?</label>
+                        <div class="form-group-row">
+                            <input type="radio" name="genital" value="0"> Ya
+                            <input type="radio" name="genital" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
                   </div>
                   <div id="step-4">
-                    <h2 class="StepTitle">Step 4 Content</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <div class="form-group form-group-diabetes">
+                        <label for="visual">Apakah penglihatan Anda akhir-akhir ini mudah kabur?</label>
+                        <div class="form-group-row mb-4">
+                            <input type="radio" name="visual" value="0"> Ya
+                            <input type="radio" name="visual" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-diabetes">
+                        <label for="itching">Apakah Anda merasa gatal pada tubuh atau kulit?</label>
+                        <div class="form-group-row mb-4">
+                            <input type="radio" name="itching" value="0"> Ya
+                            <input type="radio" name="itching" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-diabetes">
+                        <label for="irritability">Apakah Anda merasa mudah tersinggung atau cepat marah?</label>
+                        <div class="form-group-row">
+                            <input type="radio" name="irritability" value="0"> Ya
+                            <input type="radio" name="irritability" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+                  </div>
+                  <div id="step-5">
+                    <div class="form-group form-group-diabetes">
+                        <label for="healing">Apakah luka pada tubuh Anda sulit sembuh atau memerlukan waktu lama?</label>
+                        <div class="form-group-row mb-4">
+                            <input type="radio" name="healing" value="0"> Ya
+                            <input type="radio" name="healing" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-diabetes">
+                        <label for="partial">Apakah Anda mengalami kelumpuhan sebagian pada tubuh?</label>
+                        <div class="form-group-row mb-4">
+                            <input type="radio" name="partial" value="0"> Ya
+                            <input type="radio" name="partial" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-diabetes">
+                        <label for="muscle">Apakah Anda merasakan kekakuan pada otot-otot Anda?</label>
+                        <div class="form-group-row">
+                            <input type="radio" name="muscle" value="0"> Ya
+                            <input type="radio" name="muscle" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+                  </div>
+                  <div id="step-6">
+                    <div class="form-group form-group-diabetes">
+                        <label for="alopecia">Apakah Anda mengalami kebotakan atau kerontokan rambut?</label>
+                        <div class="form-group-row mb-4">
+                            <input type="radio" name="alopecia" value="0"> Ya
+                            <input type="radio" name="alopecia" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-diabetes">
+                        <label for="obesity">Apakah Anda mengalami kelebihan berat badan (obesitas)?</label>
+                        <div class="form-group-row">
+                            <input type="radio" name="obesity" value="0"> Ya
+                            <input type="radio" name="obesity" value="1" class="ml-3"> Tidak
+                        </div>
+                    </div>
                   </div>
                 </div>
                 <!-- End SmartWizard Content -->

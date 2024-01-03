@@ -10,7 +10,7 @@
 
 .nav-sm .container.body .col-md-3.left_col {
   min-height: 100%;
-  width: 70px;
+  width: 80px;
   padding: 0;
   z-index: 9999;
   position: absolute; }
@@ -984,6 +984,11 @@ button,
 .label-align {
   text-align: right; }
 
+@media (max-width: 576px) {
+  .label-align {
+    text-align: left; }
+}
+
 .input-group {
   margin-bottom: 10px; }
 
@@ -1020,6 +1025,10 @@ span.section {
 .form-horizontal .form-group {
   margin-right: 0;
   margin-left: 0; }
+
+.form-horizontal .form-group label {
+  font-size: 16px;
+}
 
 .form-control-feedback {
   position: absolute;
@@ -1267,11 +1276,6 @@ textarea:focus {
   display: -ms-flexbox;
   display: flex; }
 
-.profile-bottom {
-  background: #F2F5F7;
-  padding: 9px 0;
-  border-top: 1px solid #E6E9ED; }
-
 .border-0 {
   border: 0 !important;
 }
@@ -1458,4 +1462,32 @@ Preloader
     height: 58px;
     opacity: 0;
   }
+}
+
+.diabetes_form .x_title h2 {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.diabetes_form p {
+  font-size: 14px;
+}
+
+.form-group-diabetes {
+  margin-left: 20%;
+}
+
+.form-group-diabetes .form-group-row {
+  font-size: 17px;
+  /* text-align: center; */
+}
+
+.form-group-diabetes label {
+  font-size: 17px;
+}
+
+@media (max-width: 578px) {
+  .form-group-diabetes {
+    margin-left: 0;
+  } 
 }
