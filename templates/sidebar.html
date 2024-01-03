@@ -1,45 +1,33 @@
-<!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-    <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+<!-- sidebar -->
+<div class="col-md-3 left_col" style="position: fixed">
+    <div class="left_col scroll-view">
+      <div class="navbar nav_title" style="border: 0;">
+        <a href="/">
+          <span>GlucoWise</span>
+        </a>
+      </div>
+      <div class="clearfix"></div>
+      <!-- menu profile quick info -->
+      <div class="profile clearfix">
+        <div class="profile_pic">
+            <img src="{{ url_for('static', filename='images/user.png') }}" alt="" class="img-circle profile_img">
         </div>
-        <div class="sidebar-brand-text mx-3">GlucoWise</div>
-    </a>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="/">
-            <i class="fas fa-fw fa-house-user"></i>
-            <span>Dashboard</span></a>
-    </li>
-
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="/prediksi">
-            <i class="fas fa-fw fa-pen-nib"></i>
-            <span>Prediksi</span></a>
-    </li>
-
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-cogs"></i>
-            <span>Pengaturan</span></a>
-    </li>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
-
-    <!-- Sidebar Toggler (Sidebar) -->
-    <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        <div class="profile_info">
+          <span>Selamat Datang</span>
+          <h2>GlucoWise</h2>
+        </div>
+      </div>
+      <!-- /menu profile quick info -->
+      <!-- sidebar menu -->
+      <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+        <div class="menu_section">
+          <ul class="nav side-menu">
+            <li><a href="/"><i class="fa fa-home"></i> Dashboard</a></li>
+            <li><a href="/prediksi"><i class="fa fa-pencil"></i> Prediksi</a></li>
+            <li><a href="#"><i class="fa fa-cog"></i> Pengaturan</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- /sidebar menu -->
     </div>
-
-</ul>
-<!-- End of Sidebar -->
+</div>
