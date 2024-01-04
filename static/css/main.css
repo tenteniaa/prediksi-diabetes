@@ -192,22 +192,20 @@ body .container.body .right_col {
   width: 230px;
   float: left;
   border-radius: 0;
-  height: 57px;
+  height: 70px;
   padding: 0px;
   padding-left: 13px;
 }
 .nav_title span {
-  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 10px;
   font-size: 23px;
 }
 
-.nav_title span {
-  color: #fff;
-  text-decoration: none;
-}
-
 .nav_title img {
-  max-height: 40px;
+  max-height: 60px;
 }
 
 @media (max-width: 991px) {
@@ -392,7 +390,7 @@ a:hover, a:focus {
 
 .nav.side-menu > li > a {
   margin-bottom: 6px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-weight: 200;
 }
 
@@ -527,7 +525,14 @@ a:hover, a:focus {
   line-height: 30px; }
 
 .main_menu_side {
-  padding: 0; }
+  padding: 0; 
+}
+
+@media (min-width: 990px) {
+  .main_menu_side {
+    margin-top: 40px;
+  }
+}
 
 .main_menu span.fa {
   float: right;
@@ -886,44 +891,6 @@ span.right {
   width: 12px; }
 
 /** /top tiles **/
-.dashboard_graph {
-  background: #fff;
-  padding: 7px 10px; 
-  height: 425px;
-}
-
-.dashboard_graph .x_title {
-  display: flex;
-  justify-content: center;
-  padding: 5px 5px 7px; 
-}
-
-.dashboard_graph .layers {
-  background: #ADABAB;
-  border-radius: 10px;
-  border-left: 5px solid #fff;
-}
-
-@media (max-width: 570px) {
-  .dashboard_graph .layers {
-    border-top: 5px solid #fff;
-    border-left: none;
-  } 
-}
-
-.dashboard_graph .x_title h3 {
-  margin: 0;
-  font-weight: bold; }
-
-.dashboard_graph .x_title h2 {
-  font-size: 23px;
-  font-weight: 500;
-  text-align: center;
-}
-
-.dashboard_graph p {
-  margin: 0 0 4px; }
-
 a.user-profile {
   color: #5E6974 !important; }
 
@@ -1470,7 +1437,7 @@ Preloader
 }
 
 .diabetes_form p {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .form-group-diabetes {
