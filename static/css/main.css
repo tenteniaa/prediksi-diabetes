@@ -271,8 +271,8 @@ body {
 .fixed_height_350 {
   height: 350px; }
 
-.fixed_height_390 {
-  height: 390px; }
+.fixed_height_380 {
+  height: 380px; }
 
 .fixed_height_200 {
   height: 200px; }
@@ -1128,8 +1128,9 @@ Preloader
   width: 64px;
   height: 64px;
   position: absolute;
-  top: calc(50% - 3.5px);
-  left: calc(50% - 3.5px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .lds-ripple .lds-pos {
   position: absolute;
@@ -1166,6 +1167,37 @@ Preloader
   }
 }
 
+/*--------------------------------------------------------------
+# Scroll to top button
+--------------------------------------------------------------*/
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: #fff;
+  background: rgba(90, 92, 105, 0.5);
+  line-height: 46px;
+  border-radius: 10px;
+}
+
+.scroll-to-top:focus, .scroll-to-top:hover {
+  color: white;
+}
+
+.scroll-to-top:hover {
+  background: #5a5c69;
+}
+
+.scroll-to-top i {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+/* Form */
 .diabetes_form p {
   font-size: 15px;
 }
