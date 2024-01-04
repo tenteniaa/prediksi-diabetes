@@ -7,58 +7,57 @@
 {% block body %}
 <!-- Content -->
 <div class="right_col" role="main">
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <div class="x_panel fixed_height_350">
-              <div class="x_title">
-                <h2>Wisata by Region</h2>
-                <div class="nav navbar-right panel_toolbox">
-                  <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <h4>Jumlah Wisata berdasarkan Region</h4>
-                <div id="wisata_region" style="height:250px;"></div>
-              </div>
-            </div>
-        </div>
+  <div class="">
+    <div class="page-title">
+      <div class="title_left">
+        <h3>Deteksi Diabetes Mellitus</h3>
+      </div>
     </div>
+    
+    <div class="clearfix"></div>
 
     <div class="row">
-      <div class="col-md-6 col-sm-6">
-        <div class="x_panel fixed_height_350">
-          <div class="x_title">
-            <h2>Wisata by Region</h2>
-            <div class="nav navbar-right panel_toolbox">
-              <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-            </div>
-            <div class="clearfix"></div>
-          </div>
+      <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
           <div class="x_content">
-            <h4>Jumlah Wisata berdasarkan Region</h4>
-            <div id="wisata_region" style="height:250px;"></div>
+            <div class="col-md-3 col-sm-3 profile_left">
+              <div class="profile_img d-flex justify-content-center">
+                  <img src="{{ url_for('static', filename='images/diatech.png') }}" alt="DiaTech">
+              </div>
+              <a href="/prediksi" class="btn btn-info">Mulai Prediksi <i class="fa fa-pencil-square-o"></i></a>
+            </div>
+
+            <div class="col-md-9 col-sm-9 profile_right">
+              <div class="profile_title">
+                <h3>DiaTech (<span>Diabetes Technology</span>)</h3>
+                <!-- <div class="col-md-6">
+                  <div id="reportrange" class="pull-right" style="margin-top: 5px; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #E6E9ED">
+                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                    <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
+                  </div>
+                </div> -->
+              </div>
+
+              <p>
+                DiaTech adalah sebuah sistem website yang dirancang khusus untuk deteksi penyakit diabetes 
+                dengan memanfaatkan kecerdasan buatan atau <span>Artificial Intelegent</span> (AI). Sistem ini bertujuan untuk memberikan layanan 
+                yang memudahkan pengguna dalam melakukan deteksi dini penyakit diabetes secara cepat dan akurat. 
+              </p>
+
+              <div class="profile_goal">
+                <h2>Manfaat</h2>
+                <ul>
+                  <li><strong>Deteksi Dini</strong> - Memberikan deteksi dini penyakit diabetes, memungkinkan tindakan pencegahan lebih awal.</li>
+                  <li><strong>Akses Mudah</strong> - Pengguna dapat mengakses layanan kesehatan kapan saja dan di mana saja melalui platform online.</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="col-md-6 col-sm-6">
-        <div class="x_panel fixed_height_350">
-          <div class="x_title">
-            <h2>Kategori Wisata</h2>
-            <div class="nav navbar-right panel_toolbox">
-              <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-          <div class="x_content">
-            <h4>Jumlah Wisata berdasarkan Kategori</h4>
-            <div id="wisata_kategori" style="height:250px;"></div>
-          </div>
-        </div>
-      </div>
-
     </div>
+  </div>
 </div>
 <!-- End of Content -->
 {% endblock %}

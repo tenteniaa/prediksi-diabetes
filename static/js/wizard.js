@@ -21,9 +21,9 @@ function SmartWizard(target, options) {
     this.elmStepContainer = $('<div></div>').addClass("stepContainer");
     this.loader = $('<div>Loading</div>').addClass("loader");
     this.buttons = {
-        next : $('<a>'+options.labelNext+'</a>').attr("href","#").addClass("buttonNext"),
-        previous : $('<a>'+options.labelPrevious+'</a>').attr("href","#").addClass("buttonPrevious"),
-        finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("buttonFinish")
+        next : $('<a>'+options.labelNext+' <i class="fa fa-caret-right"></i></a>').attr("href","#").addClass("buttonNext"),
+        previous : $('<a><i class="fa fa-caret-left"></i> '+options.labelPrevious+'</a>').attr("href","#").addClass("buttonPrevious"),
+        finish  : $('<a>'+options.labelFinish+' <i class="fa fa-check"></i></a>').attr("href","#").addClass("buttonFinish")
     };
 
     /*
@@ -52,9 +52,9 @@ function SmartWizard(target, options) {
         $this.elmStepContainer.append(allDivs);
         elmActionBar.append($this.loader);
         $this.target.append($this.elmStepContainer);
-        elmActionBar.append($this.buttons.finish)
-                    .append($this.buttons.previous)
-                    .append($this.buttons.next);
+        elmActionBar.append($this.buttons.previous)
+                    .append($this.buttons.next)
+                    .append($this.buttons.finish);
         $this.target.append(elmActionBar);
         this.contentWidth = $this.elmStepContainer.width();
 
@@ -276,23 +276,23 @@ function SmartWizard(target, options) {
                 if ($this.options.hideButtonsOnDisabled) {
                     $($this.buttons.next).hide();
                 }
+
+                // Finish
+                $($this.buttons.finish).removeClass("buttonDisabled");
+                if ($this.options.hideButtonsOnDisabled) {
+                    $($this.buttons.finish).show();
+                }
             }else{
                 $($this.buttons.next).removeClass("buttonDisabled");
                 if ($this.options.hideButtonsOnDisabled) {
                     $($this.buttons.next).show();
                 }
-            }
-        }
-        // Finish Button
-        if (! $this.steps.hasClass('disabled') || $this.options.enableFinishButton){
-            $($this.buttons.finish).removeClass("buttonDisabled");
-            if ($this.options.hideButtonsOnDisabled) {
-                $($this.buttons.finish).show();
-            }
-        }else{
-            $($this.buttons.finish).addClass("buttonDisabled");
-            if ($this.options.hideButtonsOnDisabled) {
-                $($this.buttons.finish).hide();
+
+                // Finish
+                $($this.buttons.finish).addClass("buttonDisabled");
+                if ($this.options.hideButtonsOnDisabled) {
+                    $($this.buttons.finish).hide();
+                }
             }
         }
     };
@@ -437,8 +437,8 @@ $.fn.smartWizard.defaults = {
     enableFinishButton: false, // make finish button enabled always
 	hideButtonsOnDisabled: false, // when the previous/next/finish buttons are disabled, hide them instead?
     errorSteps:[],    // Array Steps with errors
-    labelNext:'Next ->',
-    labelPrevious:'<- Previous',
+    labelNext:'Next',
+    labelPrevious:'Previous',
     labelFinish:'Submit',
     noForwardJumping: false,
     onLeaveStep: null, // triggers when leaving a step
