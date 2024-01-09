@@ -195,6 +195,10 @@
               <!-- End SmartWizard Content -->
           </div>
         </div>
+
+        <div class="x_panel diabetes_predict">
+          <div class="x_content text-center"><p>{{ prediction_text }}</p></div>
+        </div>
       </div>
     </div>
   </div>
@@ -204,16 +208,16 @@
 {% block script %}
 <script>
 function changeClass(radio) {
-  var labels = document.querySelectorAll('.btn-group label');
+  var labels = document.querySelectorAll('form .btn-group label');
   labels.forEach(function (label) {
       label.classList.remove('btn-primary', 'btn-secondary');
       label.classList.add('btn-default');
   })
   var selectedLabel = radio.parentElement;
   selectedLabel.classList.remove('btn-default');
-  if (radio.value === 'male') {
+  if (radio.value === '1') {
       selectedLabel.classList.add('btn-secondary');
-  } else if (radio.value === 'female') {
+  } else if (radio.value === '0') {
       selectedLabel.classList.add('btn-primary');
   }
 }

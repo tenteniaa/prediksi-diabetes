@@ -14,6 +14,10 @@ model = pickle.load(open('model.pkl', 'rb'))
 def index():
     return render_template('index.html')
 
+@app.route('/info')
+def info():
+    return render_template('info.html')
+
 @app.route('/prediksi', methods=["GET", "POST"])
 def predict():
     try:
