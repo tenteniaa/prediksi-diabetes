@@ -14,11 +14,19 @@ model = pickle.load(open('model.pkl', 'rb'))
 def index():
     return render_template('index.html')
 
-@app.route('/info')
-def info():
-    return render_template('info.html')
+@app.route('/model')
+def model():
+    return render_template('model.html')
 
-@app.route('/prediksi', methods=["GET", "POST"])
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/form')
+def form():
+    return render_template('form.html')
+
+@app.route('/form/prediksi', methods=["GET", "POST"])
 def predict():
     try:
         if request.method == "POST":
@@ -69,8 +77,8 @@ def predict():
             # predicted_class_original = le.inverse_transform([predicted_class])[0]
 
             return render_template('prediksi.html', prediction_text = "{}".format(predicted_class))
-        
-        return render_template('prediksi.html', prediction_text="Isi formulir untuk prediksi.")
 
+        return render_template('prediksi.html', prediction_text="Negative")
+        
     except Exception as e:
         return jsonify({'error': str(e)})

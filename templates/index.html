@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block body %}
-<!-- Content -->
 <div class="right_col" role="main">
   <div class="">
     <div class="page-title">
@@ -24,7 +23,7 @@
               <div class="profile_img d-flex justify-content-center">
                   <img src="{{ url_for('static', filename='images/diatech.png') }}" alt="DiaTech">
               </div>
-              <a href="/prediksi" class="btn btn-info">Mulai Prediksi <i class="fa fa-pencil-square-o"></i></a>
+              <a href="/form" class="btn btn-info">Mulai Prediksi <i class="fa fa-pencil-square-o"></i></a>
             </div>
 
             <div class="col-md-9 col-sm-9 profile_right">
@@ -35,7 +34,8 @@
               <p>
                 DiaTech adalah sebuah sistem website yang dirancang khusus untuk deteksi penyakit diabetes 
                 dengan memanfaatkan kecerdasan buatan atau <span>Artificial Intelligence</span> (AI). Sistem ini bertujuan untuk memberikan layanan 
-                yang memudahkan pengguna dalam melakukan deteksi dini penyakit diabetes secara cepat dan akurat. 
+                yang memudahkan pengguna dalam melakukan deteksi dini penyakit diabetes secara cepat dan akurat. Sistem ini dapat membantu dokter
+                dalam menentukan diagnosa awal, namun <b>BUKAN</b> menggantikan dokter.
               </p>
 
               <div class="profile_goal">
@@ -101,7 +101,7 @@
 
           <div class="x_content">
             <div style="text-align: center; margin-bottom: 17px">
-              <img src="{{ url_for('static', filename='images/kesatu.png') }}" class="img-fluid" alt="DiaTech">
+              <img src="{{ url_for('static', filename='images/ketiga.png') }}" class="img-fluid" alt="DiaTech">
             </div>
             <div class="divider"></div>
             <ul>
@@ -116,5 +116,4 @@
     
   </div>
 </div>
-<!-- End of Content -->
 {% endblock %}

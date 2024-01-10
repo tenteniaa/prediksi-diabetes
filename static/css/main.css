@@ -255,7 +255,7 @@ body .container.body .right_col {
 
 body {
   color: #73879C;
-  background: #2A3F54;
+  background: #F7F7F7;
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -1195,8 +1195,7 @@ Preloader
 }
 
 /* Form */
-.diabetes_form p,
-.diabetes_predict p {
+.diabetes_form p {
   font-size: 15px;
 }
 
@@ -1227,6 +1226,14 @@ Preloader
   }
 }
 
+.diabetes_predict .x_content p {
+  font-size: 18px;
+}
+
+.diabetes_predict .x_content h4 {
+  font-size: 25px;
+}
+
 /* Profile */
 .profile_left .profile_img img {
   width: 95%;
@@ -1253,6 +1260,37 @@ Preloader
 .profile_right .profile_goal li {
   font-size: 15px;
 }
+
+/** Contacts **/
+.profile_contact .profile_img img {
+  width: 95%;
+  border-radius: 50%;
+  margin: 10px 0 15px 0;
+}
+
+ul.user_data li {
+  margin-bottom: 6px; }
+
+ul.user_data li p {
+  margin-bottom: 0; }
+
+/** bootstrap-progressbar  **/
+.progress {
+  border-radius: 0; }
+
+.progress-bar-info {
+  background-color: #3498DB; }
+
+.progress-bar-success {
+  background-color: #26B99A; }
+
+.progress.progress_sm {
+  border-radius: 0;
+  margin-bottom: 18px;
+  height: 10px !important; }
+
+.progress.progress_sm .progress-bar {
+  height: 10px !important; }
 
 /** Tabs **/
 ul.bar_tabs {

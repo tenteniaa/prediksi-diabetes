@@ -231,16 +231,13 @@ $(document).on('click', 'a.scroll-to-top', function(e) {
   e.preventDefault();
 });
 
-// NProgress
-if (typeof NProgress != 'undefined') {
-  $(document).ready(function () {
-      NProgress.start();
-  });
-
-  $(window).on('load', function () {
-      NProgress.done();
-  });
-}
+// Progressbar
+$(document).ready(function () {
+    if ($(".progress .progress-bar")[0]) {
+        $('.progress .progress-bar').progressbar();
+    }
+});
+// /Progressbar
 
 /* COMPOSE */
 function init_compose() {

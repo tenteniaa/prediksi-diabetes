@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Contact</title>
+{% endblock %}
+
+{% block body %}
+<div class="right_col" role="main">
+  <div class="">
+    <div class="page-title">
+      <div class="title_left">
+        <h3>Contact Developer</h3>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="x_panel">
+
+          <div class="x_content">
+            <div class="col-md-3 col-sm-3 profile_contact">
+              <div class="profile_img">
+                <div id="crop-avatar">
+                  <!-- Current avatar -->
+                  <img class="img-responsive avatar-view" src="{{ url_for('static', filename='images/tenia.jpg') }}" alt="Avatar" title="Change the avatar">
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <a href="https://www.linkedin.com/in/teniafebrianti/" target="_blank" class="btn btn-success"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/tenteniaa" target="_blank" class="btn btn-success"><i class="fa fa-github"></i></a>
+                <a href="mailto:teniafebriantii@gmail.com" target="_blank" class="btn btn-success"><i class="fa fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="col-md-9 col-sm-9">
+              <h3>Tenia Febrianti</h3>
+              <ul class="list-unstyled user_data">
+                <li><i class="fa fa-map-marker user-profile-icon"></i> Semarang, Jawa Tengah</li>
+                <li><i class="fa fa-briefcase user-profile-icon"></i> Web Developer</li>
+                <li class="m-top-xs">
+                  <i class="fa fa-external-link user-profile-icon"></i>
+                  <a href="https://teniafeb.my.id" target="_blank">teniafeb.my.id</a>
+                </li>
+              </ul>
+
+              <br />
+
+              <!-- start skills -->
+              <h4>Skills</h4>
+              <ul class="list-unstyled user_data">
+                <li>
+                  <p>Javascript</p>
+                  <div class="progress progress_sm">
+                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="95"></div>
+                  </div>
+                </li>
+                <li>
+                  <p>PHP</p>
+                  <div class="progress progress_sm">
+                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80"></div>
+                  </div>
+                </li>
+                <li>
+                  <p>Laravel</p>
+                  <div class="progress progress_sm">
+                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="90"></div>
+                  </div>
+                </li>
+                <li>
+                  <p>VueJS</p>
+                  <div class="progress progress_sm">
+                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="79"></div>
+                  </div>
+                </li>
+                <li>
+                  <p>NodeJS</p>
+                  <div class="progress progress_sm">
+                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="84"></div>
+                  </div>
+                </li>
+                <li>
+                  <p>Express</p>
+                  <div class="progress progress_sm">
+                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="70"></div>
+                  </div>
+                </li>
+                <li>
+                  <p>MySQL</p>
+                  <div class="progress progress_sm">
+                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="88"></div>
+                  </div>
+                </li>
+                <li>
+                  <p>Oracle</p>
+                  <div class="progress progress_sm">
+                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80"></div>
+                  </div>
+                </li>
+                <li>
+                  <p>HTML & CSS</p>
+                  <div class="progress progress_sm">
+                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="98"></div>
+                  </div>
+                </li>
+              </ul>
+              <!-- end of skills -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
