@@ -145,74 +145,6 @@ function init_sidebar() {
 }
 // /Sidebar
 
-// Panel toolbox
-$(document).ready(function () {
-  $('.collapse-link').on('click', function () {
-      var $BOX_PANEL = $(this).closest('.x_panel'),
-          $ICON = $(this).find('i'),
-          $BOX_CONTENT = $BOX_PANEL.find('.x_content');
-
-      // fix for some div with hardcoded fix class
-      if ($BOX_PANEL.attr('style')) {
-          $BOX_CONTENT.slideToggle(200, function () {
-              $BOX_PANEL.removeAttr('style');
-          });
-      } else {
-          $BOX_CONTENT.slideToggle(200);
-          $BOX_PANEL.css('height', 'auto');
-      }
-
-      $ICON.toggleClass('fa-chevron-up fa-chevron-down');
-  });
-
-  $('.close-link').click(function () {
-      var $BOX_PANEL = $(this).closest('.x_panel');
-
-      $BOX_PANEL.remove();
-  });
-});
-// /Panel toolbox
-
-// Tooltip
-$(document).ready(function () {
-  $('[data-toggle="tooltip"]').tooltip({
-      container: 'body'
-  });
-});
-// /Tooltip
-
-//hover and retain popover when on popover content
-var originalLeave = $.fn.popover.Constructor.prototype.leave;
-$.fn.popover.Constructor.prototype.leave = function (obj) {
-  var self = obj instanceof this.constructor ?
-      obj : $(obj.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type);
-  var container, timeout;
-
-  originalLeave.call(this, obj);
-
-  if (obj.currentTarget) {
-      container = $(obj.currentTarget).siblings('.popover');
-      timeout = self.timeout;
-      container.one('mouseenter', function () {
-          //We entered the actual popover – call off the dogs
-          clearTimeout(timeout);
-          //Let's monitor popover content instead
-          container.one('mouseleave', function () {
-              $.fn.popover.Constructor.prototype.leave.call(self, self);
-          });
-      });
-  }
-};
-
-$('body').popover({
-  selector: '[data-popover]',
-  trigger: 'click hover',
-  delay: {
-      show: 50,
-      hide: 400
-  }
-});
-
 // Scroll to top button appear
 $(document).on('scroll', function() {
   var scrollDistance = $(this).scrollTop();
@@ -243,7 +175,6 @@ $(document).ready(function () {
 function init_compose() {
 
   if (typeof ($.fn.slideToggle) === 'undefined') { return; }
-  console.log('init_compose');
 
   $('#compose, .compose-close').click(function () {
       $('.compose').slideToggle();
@@ -255,7 +186,6 @@ function init_compose() {
 function init_SmartWizard() {
 
   if (typeof ($.fn.smartWizard) === 'undefined') { return; }
-  console.log('init_SmartWizard');
 
   $('#wizard').smartWizard();
 

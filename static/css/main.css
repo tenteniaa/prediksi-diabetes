@@ -566,9 +566,6 @@ footer {
   .footer_fixed .nav-sm footer {
     margin-left: 0; } }
 
-.tooltip {
-  display: block !important; }
-
 article.media {
   width: 100%; }
 
@@ -1278,12 +1275,6 @@ ul.user_data li p {
 .progress {
   border-radius: 0; }
 
-.progress-bar-info {
-  background-color: #3498DB; }
-
-.progress-bar-success {
-  background-color: #26B99A; }
-
 .progress.progress_sm {
   border-radius: 0;
   margin-bottom: 18px;
@@ -1291,6 +1282,11 @@ ul.user_data li p {
 
 .progress.progress_sm .progress-bar {
   height: 10px !important; }
+
+.bg-green {
+  background: #1ABB9C !important;
+  border: 1px solid #1ABB9C !important;
+  color: #fff; }
 
 /** Tabs **/
 ul.bar_tabs {
@@ -1338,3 +1334,11 @@ ul.bar_tabs.right li {
 
 a:focus {
   outline: none; }
+
+.component_pca {
+  margin: 20px 0;
+  padding: 5px 10px;
+  background-color: #FFFFFF;
+  text-align: center;
+  border: 2px dashed #E0E0E0;
+}
