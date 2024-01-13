@@ -1092,18 +1092,6 @@ textarea:focus {
   display: none; }
 /** jQuery Smart Wizard  **/
 
-/** NProgress **/
-#nprogress .bar {
-  background: #1ABB9C; }
-
-#nprogress .peg {
-  -webkit-box-shadow: 0 0 10px #1ABB9C, 0 0 5px #1ABB9C;
-          box-shadow: 0 0 10px #1ABB9C, 0 0 5px #1ABB9C; }
-
-#nprogress .spinner-icon {
-  border-top-color: #1ABB9C;
-  border-left-color: #1ABB9C; }
-/** /NProgress **/
 
 /*******************
 Preloader
@@ -1196,7 +1184,7 @@ Preloader
   font-size: 15px;
 }
 
-#form2, #form3, #form4, #form5, #form6 {
+.diabetes_form .form-group-diabetes {
   margin-left: 20%;
 }
 
@@ -1209,7 +1197,7 @@ Preloader
 }
 
 @media (max-width: 578px) {
-  #form2, #form3, #form4, #form5, #form6 {
+  .diabetes_form .form-group-diabetes {
     margin-left: 2%;
   }
   .form-group-diabetes .form-group-row {
