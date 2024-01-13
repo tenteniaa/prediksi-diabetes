@@ -21,26 +21,16 @@
               <div class="clearfix"></div>
           </div>
           <div class="x_content">
-              <!-- Smart Wizard -->
               <p>Lengkapi seluruh pertanyaan di bawah dengan jujur sesuai dengan kondisi saat ini sehingga hasil yang diperoleh menjadi lebih akurat.</p>
-              <div id="wizard" class="form_wizard wizard_horizontal">
-                <ul class="wizard_steps">
-                  <li><a href="#step-1"><span class="step_no">1</span></a></li>
-                  <li><a href="#step-2"><span class="step_no">2</span></a></li>
-                  <li><a href="#step-3"><span class="step_no">3</span></a></li>
-                  <li><a href="#step-4"><span class="step_no">4</span></a></li>
-                  <li><a href="#step-5"><span class="step_no">5</span></a></li>
-                  <li><a href="#step-6"><span class="step_no">6</span></a></li>
-                </ul>
-                <div id="step-1">
-                  <form id="form1" class="form-horizontal">
-                    <div class="form-group row">
+              
+              <form action="{{ url_for('submit')}}" method="post" id="demo-form2" class="form-horizontal">
+                <div class="form-group row">
                       <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Usia</label>
                       <div class="col-md-6 col-sm-6 ">
                         <input type="number" id="Age" name="Age" class="form-control" min="1">
                       </div>
-                    </div>
-                    <div class="form-group row">
+                </div>
+                <div class="form-group row">
                       <label class="col-form-label col-md-3 col-sm-3 label-align">Jenis Kelamin</label>
                       <div class="col-md-6 col-sm-6 ">
                         <div id="gender" class="btn-group">
@@ -52,140 +42,117 @@
                           </label>
                         </div>
                       </div>
-                    </div>
-                  </form>
                 </div>
-                <div id="step-2">
-                  <form id="form2" class="form-horizontal">
-                    <div class="form-group form-group-diabetes">
+                <div class="form-group form-group-diabetes">
                         <label for="polyuria">Apakah Anda mengalami buang air kecil berlebihan?</label>
                         <div class="form-group-row mb-4">
                             <input type="radio" name="Polyuria" value="1"> Ya
                             <input type="radio" name="Polyuria" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-
-                    <div class="form-group form-group-diabetes">
+                </div>
+                <div class="form-group form-group-diabetes">
                         <label for="polydipsia">Apakah Anda merasa haus berlebihan?</label>
                         <div class="form-group-row mb-4">
                             <input type="radio" name="Polydipsia" value="1"> Ya
                             <input type="radio" name="Polydipsia" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-
-                    <div class="form-group form-group-diabetes">
+                </div>
+                <div class="form-group form-group-diabetes">
                         <label for="weight_loss">Apakah Anda mengalami penurunan berat badan yang tiba-tiba?</label>
                         <div class="form-group-row">
                             <input type="radio" name="sudden weight loss" value="1"> Ya
                             <input type="radio" name="sudden weight loss" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-                  </form>
                 </div>
-                <div id="step-3">
-                  <form id="form3" class="form-horizontal">
-                    <div class="form-group form-group-diabetes">
+                <div class="form-group form-group-diabetes">
                         <label for="weakness">Apakah Anda merasa lemah atau lesu?</label>
                         <div class="form-group-row mb-4">
                             <input type="radio" name="weakness" value="1"> Ya
                             <input type="radio" name="weakness" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-
-                    <div class="form-group form-group-diabetes">
+                </div>
+                <div class="form-group form-group-diabetes">
                         <label for="polyphagia">Apakah Anda mengalami nafsu makan berlebihan?</label>
                         <div class="form-group-row mb-4">
                             <input type="radio" name="Polyphagia" value="1"> Ya
                             <input type="radio" name="Polyphagia" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-
-                    <div class="form-group form-group-diabetes">
+                </div>
+                <div class="form-group form-group-diabetes">
                         <label for="genital">Apakah Anda mengalami infeksi jamur pada area kelamin?</label>
                         <div class="form-group-row">
                             <input type="radio" name="Genital thrush" value="1"> Ya
                             <input type="radio" name="Genital thrush" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-                  </form>
                 </div>
-                <div id="step-4">
-                  <form id="form4" class="form-horizontal">
-                    <div class="form-group form-group-diabetes">
+                <div class="form-group form-group-diabetes">
                         <label for="visual">Apakah penglihatan Anda akhir-akhir ini mudah kabur?</label>
                         <div class="form-group-row mb-4">
                             <input type="radio" name="visual blurring" value="1"> Ya
                             <input type="radio" name="visual blurring" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-
-                    <div class="form-group form-group-diabetes">
+                </div>
+                <div class="form-group form-group-diabetes">
                         <label for="itching">Apakah Anda merasa gatal pada tubuh atau kulit?</label>
                         <div class="form-group-row mb-4">
                             <input type="radio" name="Itching" value="1"> Ya
                             <input type="radio" name="Itching" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-
-                    <div class="form-group form-group-diabetes">
+                </div>
+                <div class="form-group form-group-diabetes">
                         <label for="irritability">Apakah Anda merasa mudah tersinggung atau cepat marah?</label>
                         <div class="form-group-row">
                             <input type="radio" name="Irritability" value="1"> Ya
                             <input type="radio" name="Irritability" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-                  </form>
                 </div>
-                <div id="step-5">
-                  <form id="form5" class="form-horizontal">
-                    <div class="form-group form-group-diabetes">
+                <div class="form-group form-group-diabetes">
                         <label for="healing">Apakah luka pada tubuh Anda sulit sembuh atau memerlukan waktu lama?</label>
                         <div class="form-group-row mb-4">
                             <input type="radio" name="delayed healing" value="1"> Ya
                             <input type="radio" name="delayed healing" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-
-                    <div class="form-group form-group-diabetes">
+                </div>
+                <div class="form-group form-group-diabetes">
                         <label for="partial">Apakah Anda mengalami kelumpuhan sebagian pada tubuh?</label>
                         <div class="form-group-row mb-4">
                             <input type="radio" name="partial paresis" value="1"> Ya
                             <input type="radio" name="partial paresis" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-
-                    <div class="form-group form-group-diabetes">
+                </div>
+                <div class="form-group form-group-diabetes">
                         <label for="muscle">Apakah Anda merasakan kekakuan pada otot-otot Anda?</label>
                         <div class="form-group-row">
                             <input type="radio" name="muscle stiffness" value="1"> Ya
                             <input type="radio" name="muscle stiffness" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-                  </form>
                 </div>
-                <div id="step-6">
-                  <form id="form6" class="form-horizontal">
-                    <div class="form-group form-group-diabetes">
+                <div class="form-group form-group-diabetes">
                         <label for="alopecia">Apakah Anda mengalami kebotakan atau kerontokan rambut?</label>
                         <div class="form-group-row mb-4">
                             <input type="radio" name="Alopecia" value="1"> Ya
                             <input type="radio" name="Alopecia" value="0" class="ml-3"> Tidak
                         </div>
-                    </div>
-
-                    <div class="form-group form-group-diabetes">
-                        <label for="obesity">Apakah Anda mengalami kelebihan berat badan (obesitas)?</label>
-                        <div class="form-group-row">
-                            <input type="radio" name="Obesity" value="1"> Ya
-                            <input type="radio" name="Obesity" value="0" class="ml-3"> Tidak
-                        </div>
-                    </div>
-                  </form>
                 </div>
-              </div>
+                <div class="form-group form-group-diabetes">
+                  <label for="obesity">Apakah Anda mengalami kelebihan berat badan (obesitas)?</label>
+                  <div class="form-group-row">
+                      <input type="radio" name="Obesity" value="1"> Ya
+                      <input type="radio" name="Obesity" value="0" class="ml-3"> Tidak
+                  </div>
+                </div>
+
+                <div class="ln_solid"></div>
+								<div class="item form-group">
+									<div class="col-md-6 col-sm-6 offset-md-3">
+										<button class="btn btn-primary" type="button">Cancel</button>
+										<button class="btn btn-primary" type="reset">Reset</button>
+										<button type="submit" class="btn btn-success">Submit</button>
+									</div>
+								</div>
+              </form>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -208,36 +175,5 @@ function changeClass(radio) {
       selectedLabel.classList.add('btn-primary');
   }
 }
-
-var ajaxInvoke = false;
-$("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
-
-   if (stepDirection === 'forward' && stepNumber === 2 && ajaxInvoke ==false) {
-
-        var elmForm = $("#form-step-" + stepNumber);
-        if (stepDirection === 'forward' && elmForm) {
-            elmForm.validator('validate');
-            var elmErr = elmForm.children('.has-error');
-
-            if (elmErr && elmErr.length > 0) {
-                return false;
-            } else {
-               ajaxInvoke = true;
-               $.ajax({
-                   method: 'POST',
-                   url: url,
-                   data: data
-              }).then(function (response) {
-                  // indicate the ajax has been done, release the next step
-                  $("#smartwizard").smartWizard("next");
-              }, function (){
-                 // hang on this step if the error occur
-              });
-              return false;
-            }
-        }
-   }
-   return true;
-});
 </script>
 {% endblock %}
