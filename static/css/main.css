@@ -1288,6 +1288,15 @@ ul.bar_tabs {
   width: 100%;
   border-bottom: 1px solid #E6E9ED; }
 
+@media (max-width: 578px) {
+  ul.bar_tabs {
+    padding-left: 2px;
+  }
+  ul.bar_tabs > li {
+    margin-left: 5px;
+  }
+}
+
 ul.bar_tabs > li {
   border: 1px solid #E6E9ED;
   color: #333 !important;

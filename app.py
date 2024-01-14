@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 
 app = Flask(__name__)
-model_LR = pickle.load(open('model.pkl', 'rb'))
+model_LR = pickle.load(open('model_LR.pkl', 'rb'))
 le = pickle.load(open('le.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
 pca = pickle.load(open('pca.pkl', 'rb'))
@@ -67,10 +67,10 @@ def submit():
         data_df = pd.DataFrame(data)
 
         new_data_std = scaler.transform(data_df)
-        new_data_pca = pca.transform(new_data_std)
+        # new_data_pca = pca.transform(new_data_std)
 
         # Prediksi terhadap data baru
-        prediction = model_LR.predict(new_data_pca)
+        prediction = model_LR.predict(new_data_std)
         predicted_class = prediction[0]
         predicted_class_original = le.inverse_transform([predicted_class])[0]
 
