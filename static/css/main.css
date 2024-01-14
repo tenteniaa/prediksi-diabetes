@@ -993,7 +993,7 @@ textarea:focus {
 }
 
 /** jQuery Smart Wizard  **/
-.form_wizard .stepContainer {
+/* .form_wizard .stepContainer {
   display: block;
   position: relative;
   margin: 0;
@@ -1089,7 +1089,7 @@ textarea:focus {
   display: none; }
 
 .form_wizard .msgBox {
-  display: none; }
+  display: none; } */
 /** jQuery Smart Wizard  **/
 
 
@@ -1338,4 +1338,73 @@ a:focus {
   background-color: #FFFFFF;
   text-align: center;
   border: 2px dashed #E0E0E0;
+}
+
+/* Progressbar */
+.progressbar_form {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem auto 3rem;
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .progressbar_form {
+    width: 100%;
+  }
+}
+
+.progressbar_form::before,
+.progress_form {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: 1;
+}
+
+.progress_form {
+  background-color: #1ABB9C;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step-active {
+  background-color: #1ABB9C;
+  color: #f3f3f3;
+}
+
+/* Form */
+.form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step-active {
+  display: block;
 }

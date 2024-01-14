@@ -23,7 +23,7 @@ def contact():
 
 @app.route('/form')
 def form():
-    return render_template('form2.html')
+    return render_template('form.html')
 
 @app.route('/form/prediksi')
 def predict():
@@ -77,4 +77,4 @@ def submit():
         return render_template('prediksi.html', prediction_text=predicted_class_original)
 
     # Jika metode bukan POST, tampilkan halaman formulir
-    return render_template('form2.html')
+    return render_template('form.html')

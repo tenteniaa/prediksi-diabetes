@@ -182,28 +182,9 @@ function init_compose() {
 
 };
 
-/* SMART WIZARD */
-function init_SmartWizard() {
-
-  if (typeof ($.fn.smartWizard) === 'undefined') { return; }
-
-  $('#wizard').smartWizard();
-
-  $('#wizard_verticle').smartWizard({
-      transitionEffect: 'slide'
-  });
-
-  $('.buttonNext').addClass('btn btn-success');
-  $('.buttonPrevious').addClass('btn btn-primary');
-  $('.buttonFinish').addClass('btn btn-success');
-
-};
-
-
 $(document).ready(function () {
 
   init_sidebar();
   init_compose();
-  init_SmartWizard();
 
 });	
