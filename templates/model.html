@@ -23,19 +23,46 @@
           <div class="x_content">
             <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#semua" role="tab" aria-controls="home" aria-selected="true">Semua</a>
+                <a class="nav-link active" id="dataset-tab" data-toggle="tab" href="#dataset" role="tab" aria-controls="dataset" aria-selected="true">Dataset</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="before-tab" data-toggle="tab" href="#before" role="tab" aria-controls="before" aria-selected="false">LR</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="after-tab" data-toggle="tab" href="#after" role="tab" aria-controls="after" aria-selected="false">LR+SMOTE+PCA</a>
+                <a class="nav-link" id="perbandingan-tab" data-toggle="tab" href="#perbandingan" role="tab" aria-controls="perbandingan" aria-selected="false">Perbandingan</a>
               </li>
             </ul>
             <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="semua" role="tabpanel" aria-labelledby="home-tab">
+              <div class="tab-pane fade show active" id="dataset" role="tabpanel" aria-labelledby="dataset-tab">
 
-                <div class="">
+                <div class="table-container">
+                  {% if data %}
+                  <table>
+                      <thead>
+                          <tr>
+                              {% for column in data[0].keys() %}
+                                  <th>{{ column }}</th>
+                              {% endfor %}
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {% for row in data %}
+                              <tr>
+                                  {% for value in row.values() %}
+                                      <td>{{ value }}</td>
+                                  {% endfor %}
+                              </tr>
+                          {% endfor %}
+                      </tbody>
+                  </table>
+                  {% else %}
+                      <p>Data tidak tersedia.</p>
+                  {% endif %}
+                </div>
+
+                <div class="component_pca">
+                  <img src="{{ url_for('static', filename='images/corr.png') }}" class="img-fluid" alt="Correlation">
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="my-3">
                   <div class="col-md-6 col-sm-12">
                     <img src="{{ url_for('static', filename='images/before-smote.png') }}" class="img-fluid" alt="Before SMOTE">
                   </div>
@@ -45,11 +72,9 @@
                 </div>
                 <div class="clearfix"></div>
 
-                <div class="component_pca">
-                  <img src="{{ url_for('static', filename='images/corr.png') }}" class="img-fluid" alt="Correlation">
-                  <h3>n component = 14</h3>
-                </div>
-                <div class="clearfix"></div>
+              </div>
+
+              <div class="tab-pane fade" id="perbandingan" role="tabpanel" aria-labelledby="perbandingan-tab">
 
                 <div class="">
                   <div class="col-md-6 col-sm-12">
@@ -71,27 +96,10 @@
                   </div>
                 </div>
 
-              </div>
-              <div class="tab-pane fade" id="before" role="tabpanel" aria-labelledby="before-tab">
-                <div class="">
-                  <div class="col-md-6 col-sm-12">
-                    <img src="{{ url_for('static', filename='images/before.png') }}" class="img-fluid mb-2" alt="Before SMOTE">
-                  </div>
-                  <div class="col-md-6 col-sm-12">
-                    <h4>Algoritma Klasifikasi: <b>Logistic Regression</b></h4>
-                  </div>
+                <div class="text-center mt-4">
+                  <img src="{{ url_for('static', filename='images/novelty.png') }}" class="img-fluid mb-2" alt="Novelty">
                 </div>
-              </div>
-              <div class="tab-pane fade" id="after" role="tabpanel" aria-labelledby="after-tab">
-                <div class="">
-                  <div class="col-md-6 col-sm-12">
-                    <img src="{{ url_for('static', filename='images/after.png') }}" class="img-fluid mb-2" alt="Before SMOTE">
-                  </div>
-                  <div class="col-md-6 col-sm-12">
-                    <h4>Metode Oversampling: <b>SMOTE</b></h4>
-                    <h4>Reduksi Fitur: <b>PCA (Principal Component Analysis)</b></h4>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>

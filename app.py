@@ -4,18 +4,15 @@ import pandas as pd
 import pickle
 
 app = Flask(__name__)
-model_LR = pickle.load(open('model_LR.pkl', 'rb'))
-le = pickle.load(open('le.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
-pca = pickle.load(open('pca.pkl', 'rb'))
+
+model_LR = pickle.load(open('./models/model_LR.pkl', 'rb'))
+le = pickle.load(open('./models/le.pkl', 'rb'))
+scaler = pickle.load(open('./models/scaler.pkl', 'rb'))
+pca = pickle.load(open('./models/pca.pkl', 'rb'))
 
 @app.route('/')
 def index():
     return render_template('index.html')
-
-@app.route('/model')
-def model():
-    return render_template('model.html')
 
 @app.route('/contact')
 def contact():
@@ -80,3 +77,16 @@ def submit():
 
     # Jika metode bukan POST, tampilkan halaman formulir
     return render_template('form.html')
+
+@app.route('/model')
+def model():
+    # Baca dataset dari file CSV
+    dataset = pd.read_csv('./dataset/diabetes_early.csv')
+    
+    # Ubah dataset menjadi list of dictionaries agar mudah ditampilkan di HTML
+    data = dataset.to_dict('records')
+    
+    return render_template('model.html', data=data)
+
+if __name__ == '__main__':
+    app.run(debug=True)
