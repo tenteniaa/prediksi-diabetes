@@ -24,9 +24,9 @@
           <div class="x_content text-center">
             <p>Hasil Prediksi Anda adalah</p>
             {% if prediction_text == 'Negative' %}
-                <h4><span class="badge badge-success">Selamat, Anda dinyatakan bebas dari Diabetes</span></h4>
+                <h4><span class="badge badge-success">Anda diprediksi 'Negatif' Diabetes</span></h4>
             {% elif prediction_text == 'Positive' %}
-                <h4><span class="badge badge-danger">Mohon maaf, Anda memiliki potensi Diabetes</span></h4>
+                <h4><span class="badge badge-danger">Anda diprediksi 'Positif' Diabetes</span></h4>
             {% else %}
                 <h4>{{ prediction_text }}</h4>
             {% endif %}
